@@ -47,13 +47,14 @@ atom-text-editor, :host {
   }
 }
 
-atom-text-editor, :host {
-  .search-results .marker .region {
+// This must use ::shadow to override the find-and-replace package's styles
+atom-text-editor, atom-text-editor::shadow {
+  .find-result .region {
     background-color: transparent;
     border: 1px solid #888;
   }
 
-  .search-results .marker.current-result .region {
+  .current-result .region {
     border: 1px solid #fff;
   }
 }
