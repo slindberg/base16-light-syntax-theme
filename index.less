@@ -1,10 +1,4 @@
-.editor-colors {
-  background-color: #f5f5f5;
-  color: #505050;
-}
-
-.editor {
-
+atom-text-editor, :host {
   background-color: #f5f5f5;
   color: #505050;
 
@@ -53,13 +47,15 @@
   }
 }
 
-.editor .search-results .marker .region {
-  background-color: transparent;
-  border: 1px solid #888;
-}
+atom-text-editor, :host {
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid #888;
+  }
 
-.editor .search-results .marker.current-result .region {
-  border: 1px solid #fff;
+  .search-results .marker.current-result .region {
+    border: 1px solid #fff;
+  }
 }
 
 .comment {
@@ -301,6 +297,8 @@
   }
 }
 
-.editor.mini .scroll-view {
-  padding-left: 1px;
+atom-text-editor[mini], :host([mini]) {
+  .scroll-view {
+    padding-left: 1px;
+  }
 }
